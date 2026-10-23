@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Romynstitian Language Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="quiz-container">
+        <header>
+            <h1>Language Quiz</h1>
+            <p>Test your knowledge of a fictional language!</p>
+        </header>
+
+        <section id="quiz-screen">
+            <div class="progress-area">
+                <span id="question-counter">Question 1 of 12</span>
+                <span id="score-counter">Score: 0</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <p class="instruction">Translate this word:</p>
+
+		<h2 id="question-word"></h2>
+
+            <form id="answer-form">
+                <label for="answer-input">Your translation</label>
+
+                <input
+                    type="text"
+                    id="answer-input"
+                    dir="auto"
+                    placeholder="Type your answer..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="submit-button">
+                    Check answer
+                </button>
+            </form>
+
+            <div
+                id="feedback"
+                class="feedback"
+                role="status"
+                aria-live="polite"
+                hidden
+            >
+                <p id="feedback-message"></p>
+                <p id="correct-answer"></p>
+            </div>
+
+            <button id="next-button" hidden>
+                Next question
+            </button>
+        </section>
+
+        <section id="result-screen" hidden>
+            <h2>Quiz completed!</h2>
+
+            <p id="final-score"></p>
+            <p id="result-message"></p>
+
+            <button id="restart-button">
+                Try Again
+            </button>
+        </section>
+    </main>
+</body>
+</html>

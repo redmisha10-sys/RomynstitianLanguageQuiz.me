@@ -1,0 +1,202 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #202938;
+	background-image:url("Romynstica.png");
+}
+
+/* Main quiz card */
+.quiz-container {
+    width: 100%;
+    max-width: 540px;
+    padding: 32px;
+    
+    /* Change 'white' to this: */
+    background: rgba(255, 255, 255, 0.85); 
+    
+    /* Optional: Add a cool blur effect behind the box */
+    backdrop-filter: blur(8px); 
+    
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+	<img src="Romynstica.png" alt="Country Flag" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    color: #3349a5;
+}
+
+header p {
+    color: #687386;
+    line-height: 1.5;
+}
+
+/* Progress information */
+.progress-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+    color: #586174;
+}
+
+.progress-bar {
+    height: 8px;
+    margin: 12px 0 28px;
+
+    background: #e4e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0;
+    height: 100%;
+    background: #5865d8;
+    transition: width 0.25s ease;
+}
+
+.instruction {
+    color: #687386;
+    text-align: center;
+}
+
+/* The word to translate */
+#question-word {
+    margin: 24px 0;
+    text-align: center;
+    font-size: clamp(32px, 7vw, 44px);
+    overflow-wrap: anywhere;
+}
+
+/* Answer form */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+
+    font: inherit;
+    font-size: 18px;
+
+    border: 2px solid #d9deea;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: 3px solid #cdd4ff;
+    border-color: #5865d8;
+}
+
+button {
+    width: 100%;
+    padding: 14px 18px;
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4658c9;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #3444a8;
+}
+
+button:focus-visible {
+    outline: 3px solid #9da8ff;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Feedback after checking an answer */
+.feedback {
+    margin-top: 20px;
+    padding: 16px;
+
+    border-radius: 10px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.feedback.correct {
+    background: #e6f7eb;
+    color: #176534;
+}
+
+.feedback.incorrect {
+    background: #fff0ed;
+    color: #a22c24;
+}
+
+#correct-answer {
+    font-weight: bold;
+}
+
+/* Final results */
+#result-screen {
+    text-align: center;
+}
+
+#final-score {
+    margin: 24px 0 12px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #4658c9;
+}
+
+#result-message {
+    color: #586174;
+    line-height: 1.6;
+}
+
+/* The HTML hidden attribute must always hide these elements. */
+[hidden] {
+    display: none !important;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .quiz-container {
+        padding: 22px;
+    }
+}
